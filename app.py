@@ -6,11 +6,11 @@ from models import db, Bank, Branch
 
 def create_app():
     app = Flask(__name__)
-    DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///data.db")
-    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    DB_PATH = os.path.join(BASE_DIR, "data.db")
+    app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_PATH}"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
-
     @app.route("/")
     def index():
         return {
