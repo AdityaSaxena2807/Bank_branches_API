@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+
+# Environment files
+.env
+*.env
+
+# Database files
+*.db
+data.db
+
+# CSV and large datasets
+*.csv
+bank_branches.csv
+
+# VSCode settings
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# pytest cache
+.pytest_cache/
+
+# Byte-compiled
+*.pyd
+
+# Logs
+*.log
+
+# Local development
+instance/
